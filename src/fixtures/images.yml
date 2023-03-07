@@ -1,0 +1,5 @@
+entity: Images
+processor: ../processor/UserProcessor
+items:
+  image1:
+    image: 'jbkvgkhv,kjgb,ljb.mbkh.knh.m'

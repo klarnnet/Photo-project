@@ -3,12 +3,12 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ImagesController } from './images.controller';
 import { ImagesService } from './images.service';
-import { ImagesEntity } from './entities/images.entity';
- 
+import { Images } from './entities/images.entity';
+// import configService  from '../../ormconfig';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([ImagesEntity])],
+    TypeOrmModule.forFeature([Images])],
   controllers: [ImagesController],
   providers: [ImagesService],
 })

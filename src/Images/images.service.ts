@@ -1,4 +1,4 @@
-import { ImagesEntity } from './entities/images.entity';
+import { Images } from './entities/images.entity';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -6,11 +6,11 @@ import { Repository } from 'typeorm';
 @Injectable()
 export class ImagesService {
   constructor(
-    @InjectRepository(ImagesEntity)
-    private imagesRepository: Repository <ImagesEntity>
+    @InjectRepository(Images)
+    private imagesRepository: Repository <Images>
   ){}
-  async findAll(){
-    return await this.imagesRepository.find()
+   getImages(){
+    return this.imagesRepository.find()
 
   }
 }

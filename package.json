@@ -18,16 +18,14 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "pretypeorm": "(rm ormconfig.json || :) && ts-node -r tsconfig-paths/register src/scripts/write-type-orm-config.ts",
-    "fixtures:load": "ts-node -r tsconfig-paths/register bin/scripts/load-fixtures.ts",
-    "fixtures:update": "npm run fixtures:load -- update",
-    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js --dataSource ormconfig.ts",
-    "migration:create": "npm run typeorm migration:create -- -n migrations/Migration",
-    "migration:up": "npm run typeorm migration:run",
-    "migration:down": "npm run typeorm migration:revert",
-    "migration:generate": "npm run typeorm migration:generate migrations/Migration",
-    "drop-db": "npm run typeorm schema:drop",
-    "full-reload": "npm run drop-db && npm run migration:up && npm run fixtures:load"
+    
+    "fixtures": "fixtures-ts-node-commonjs",
+
+    "typeorm:cli": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli -d src/config/data-source.ts",
+    "migration:generate": "npm start typeorm:cli migration:generate",
+    "migration:create": "npm start typeorm:cli migration:create",
+    "migration:run": "npm start typeorm:cli migration:run",
+    "migration:revert": "npm start typeorm:cli migration:revert"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",

@@ -4,7 +4,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ImagesController } from './images.controller';
 import { ImagesService } from './images.service';
 import { Images } from './entities/images.entity';
-// import configService  from '../../ormconfig';
 
 @Module({
   imports: [

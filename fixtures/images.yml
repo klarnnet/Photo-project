@@ -1,5 +1,5 @@
 entity: Images
-processor: ../processor/UserProcessor
+processor: ../processor/ImagesProcessor.ts
 items:
   image1:
     image: 'jbkvgkhv,kjgb,ljb.mbkh.knh.m'

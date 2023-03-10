@@ -9,8 +9,18 @@ export class ImagesService {
     @InjectRepository(Images)
     private imagesRepository: Repository <Images>
   ){}
-   getImages(){
-    return this.imagesRepository.find()
+  
+  async getImages(pagination: number): Promise<Images[]> {
+    const numbers = Object.values(pagination)[0].replace(/[^0-9,]/g, '').split(',')
 
+    const build = this.imagesRepository
+      .createQueryBuilder('books')
+      .select('books')
+      .where('books.id >= :start AND books.id <= :end', {
+        start: +numbers[0],
+        end: +numbers[1],
+      });
+    console.log(numbers);
+    return build.getMany();
   }
 }

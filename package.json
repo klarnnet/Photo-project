@@ -5,6 +5,7 @@
   "author": "",
   "private": true,
   "license": "UNLICENSED",
+
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -18,14 +19,12 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    
-    "fixtures": "fixtures-ts-node-commonjs",
 
-    "typeorm:cli": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli -d src/config/data-source.ts",
-    "migration:generate": "npm start typeorm:cli migration:generate",
-    "migration:create": "npm start typeorm:cli migration:create",
-    "migration:run": "npm start typeorm:cli migration:run",
-    "migration:revert": "npm start typeorm:cli migration:revert"
+    "typeorm": "npm run build && npx typeorm -d dist/ormconfig.js",
+    "migration:generate":"npm run typeorm -- migration:generate",
+    "migration:run":"npm run typeorm -- migration:run",
+    "migration:revert":"npm run typeorm -- migration:revert"
+
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",

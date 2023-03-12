@@ -1,0 +1,38 @@
+entity: Images
+items:
+  image1:
+    id: 1
+    image: 'https://avatars.mds.yandex.net/i?id=e705bce81a60e5728529f206f95d815a-5333646-images-thumbs&n=13&exp=1'
+  image2:
+    id: 2
+    image: 'https://avatars.mds.yandex.net/i?id=e8364bad1ccef20c6defb93f028a4375-5528595-images-thumbs&n=13&exp=1'
+  image3:
+    id: 3
+    image: 'https://avatars.mds.yandex.net/i?id=0520d18b316a639d3bcaf75f8c170533-4079688-images-thumbs&n=13&exp=1'
+  image4:
+    id: 4
+    image: 'https://avatars.mds.yandex.net/i?id=f36c1333ae97ada2b42d9ac3a4f4e41a-5283686-images-thumbs&n=13&exp=1'
+  image5:
+    id: 5
+    image: 'https://avatars.mds.yandex.net/i?id=e567d28da197ecb1a933dafc229bd3f6-5220124-images-thumbs&n=13&exp=1'
+  image6:
+    id: 6
+    image: 'https://avatars.mds.yandex.net/i?id=f465a8f61dc5d6896676c6052deef102-5745674-images-thumbs&n=13&exp=1'
+  image7:
+    id: 7
+    image: 'https://avatars.mds.yandex.net/i?id=5c1185cc69a0e06ccba31d17cc4b3b3e-5513171-images-thumbs&n=13&exp=1'
+  image8:
+    id: 8
+    image: 'https://avatars.mds.yandex.net/i?id=265eae10d5e6dbeeb7ccc677806b32f3-7012204-images-thumbs&n=13&exp=1'
+  image9:
+    id: 9
+    image: 'https://avatars.mds.yandex.net/i?id=265eae10d5e6dbeeb7ccc677806b32f3-7012204-images-thumbs&n=13&exp=1'
+  image10:
+    id: 10
+    image: 'https://avatars.mds.yandex.net/i?id=558ab8c0b68a545350f4792ee9e4035dcae83ee3-8249876-images-thumbs&n=13&exp=1'
+  image11:
+    id: 11
+    image: 'https://avatars.mds.yandex.net/i?id=b55adc311b6e31545d1f410decb5cd4dbca294e0-9068918-images-thumbs&n=13&exp=1'
+  image12:
+    id: 12
+    image: 'https://avatars.mds.yandex.net/i?id=df9b7fecb6ccc312cbce19baa8561515162d39b3-7213677-images-thumbs&n=13&exp=1'

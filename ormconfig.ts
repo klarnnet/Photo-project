@@ -1,3 +1,4 @@
+import { MIGRATIONS } from './migrations/index';
 import { DataSource, DataSourceOptions } from 'typeorm';
  
 export const dataSourceOptions:DataSourceOptions ={
@@ -7,8 +8,8 @@ export const dataSourceOptions:DataSourceOptions ={
         username:'postgres',
         password:'root',
         database:'images',
-        entities: ['dist/src/Images/entities/images.entity.js'],
-        migrations:['dist/migrations/*.js']
+        entities: ['./dist/entities/images.entity.js'],
+        migrations:MIGRATIONS
 }
 const dataSource = new DataSource(dataSourceOptions);
 export default dataSource
